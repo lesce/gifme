@@ -11,8 +11,8 @@ function setHeader(req){
   req.setRequestHeader("Authorization","Client-ID 277282d5a28094d")
 }
 
-function showPhotos(data,status,x) {
-  console.log(data);
-  console.log(status);
-  console.log(x);
+function showPhotos(gif_data,status,x) {
+  gif_data.data.forEach(function(img){
+    $('#images').append("<img src='"+img.link+"' />");
+  });
 }
